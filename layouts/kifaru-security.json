@@ -1,0 +1,141 @@
+{
+  "id": "root",
+  "type": "column",
+  "theme": "graphite",
+  "font": "JetBrains Mono",
+  "font_size": 14,
+  "ui_font": "Geist",
+  "preview": "mods/kifaru-security/preview.png",
+  "background": "#101512",
+  "colors": {
+    "background": "#101512",
+    "canvas": "#101512",
+    "chrome": "#141b17",
+    "surface": "#1a231d",
+    "raised": "#243027",
+    "border": "#304035",
+    "accent": "#c1ef79",
+    "foreground": "#e6eee4",
+    "muted": "#a6b6a6",
+    "dim": "#819580",
+    "selected": "#2a3a26",
+    "hover": "#304035",
+    "working": "#8fc9ef",
+    "blocked": "#f0ad70",
+    "done": "#c1ef79",
+    "idle": "#819580"
+  },
+  "children": [
+    {
+      "id": "brand",
+      "type": "block",
+      "content": {
+        "mod": "kifaru-security",
+        "props": {
+          "role": "bar"
+        }
+      },
+      "size": {
+        "px": 58
+      }
+    },
+    {
+      "id": "body",
+      "type": "row",
+      "divider": {
+        "width": 1,
+        "color": "border"
+      },
+      "children": [
+        {
+          "id": "sidebar",
+          "type": "block",
+          "content": {
+            "mod": "kifaru-security",
+            "props": {
+              "role": "nav"
+            }
+          },
+          "size": {
+            "px": 224
+          },
+          "min": 180,
+          "max": 360
+        },
+        {
+          "id": "work",
+          "type": "column",
+          "padding": 10,
+          "gap": 8,
+          "children": [
+            {
+              "id": "tabs",
+              "type": "block",
+              "content": {
+                "mod": "kifaru-security", "props": {"role":"tabs"}
+              },
+              "size": {
+                "px": 36
+              }
+            },
+            {
+              "id": "main",
+              "type": "block",
+              "content": {
+                "tab": "active",
+                "pane": {
+                  "gap": 8,
+                  "radius": 8,
+                  "background": "background",
+                  "border": {
+                    "width": 1,
+                    "color": "border"
+                  },
+                  "focus": {
+                    "width": 1,
+                    "color": "accent"
+                  },
+                  "header": {
+                    "content": {
+                      "mod": "pane"
+                    },
+                    "height": 30
+                  },
+                  "lone": true
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "review",
+          "type": "block",
+          "content": {
+            "mod": "kifaru-security",
+            "props": {
+              "role": "review"
+            }
+          },
+          "size": {
+            "px": 304
+          },
+          "min": 270,
+          "max": 420
+        }
+      ]
+    },
+    {
+      "id": "footer",
+      "type": "block",
+      "content": {
+        "mod": "kifaru-security",
+        "props": {
+          "role": "footer"
+        }
+      },
+      "size": {
+        "px": 30
+      }
+    }
+  ]
+}
